@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Saves"
+    <item android:title="Library"
         android:icon="@drawable/bookmark_icon"
         android:id="@+id/Saves"/>
 
-    <item android:title="Add"
+    <item android:title="Find"
         android:icon="@drawable/add_icon"
         android:id="@+id/Add"/>
 
-    <item android:title="Extensions"
+    <item android:title="Sources"
         android:icon="@drawable/link_icon"
         android:id="@+id/Extensions"/>
 
