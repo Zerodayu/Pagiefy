@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
+    //Status bar transparent setup
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            // Make the status bar translucent
             getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 
-            // Add padding to the content so it doesn't go under the status bar
             View contentView = findViewById(android.R.id.content);
             contentView.setPadding(0, getStatusBarHeight(), 0, 0);
         }
