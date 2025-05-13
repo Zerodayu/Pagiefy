@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             contentView.setPadding(0, getStatusBarHeight(), 0, 0);
         }
 
+        //Default Fragment Show
         replaceFragment(new SavesFragment());
 
         binding.BottomNav.setOnItemSelectedListener(item -> {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         updateBottomNavVisibility(fragment);
     }
 
+    //Navbar auto hide
     private void updateBottomNavVisibility(Fragment fragment) {
         if (fragment instanceof SavesFragment ||
                 fragment instanceof AddFragment ||
