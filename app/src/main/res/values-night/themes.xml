@@ -1,0 +1,94 @@
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Primary color settings (used for main elements like buttons, highlights) -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/black</item>
+
+        <!-- Secondary color settings (used for accents and less prominent UI components) -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/black</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+
+        <!-- Tertiary color settings (used for additional accents and highlights) -->
+        <item name="colorTertiary">@color/black</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/black</item>
+        <item name="colorOnTertiaryContainer">@color/white</item>
+
+        <!-- Error color settings (used for error messages and warnings) -->
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/red</item>
+        <item name="colorErrorContainer">@color/red</item>
+        <item name="colorOnErrorContainer">@color/red</item>
+
+        <!-- Background color of the app (typically window background) -->
+        <item name="android:colorBackground">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <!-- Surface color settings (used for UI elements like cards, sheets, menus) -->
+        <item name="colorSurface">@color/black</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorSurfaceVariant">@color/black</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+
+        <!-- Outline colors (used for borders, outlines, etc.) -->
+        <item name="colorOutline">@color/white</item>
+        <item name="colorOutlineVariant">@color/white</item>
+
+        <!-- Inverse surface colors (used for dark/light mode contrast elements) -->
+        <item name="colorSurfaceInverse">@color/white</item>
+        <item name="colorOnSurfaceInverse">@color/black</item>
+
+        <!-- Inverse primary color (alternative primary for dark/light themes) -->
+        <item name="colorPrimaryInverse">@color/black</item>
+
+        <!-- Fixed primary color settings (used in dynamic color themes for consistent appearance) -->
+        <item name="colorPrimaryFixed">@color/black</item>
+        <item name="colorOnPrimaryFixed">@color/white</item>
+        <item name="colorPrimaryFixedDim">@color/black</item>
+        <item name="colorOnPrimaryFixedVariant">@color/white</item>
+
+        <!-- Fixed secondary color settings -->
+        <item name="colorSecondaryFixed">@color/black</item>
+        <item name="colorOnSecondaryFixed">@color/white</item>
+        <item name="colorSecondaryFixedDim">@color/black</item>
+        <item name="colorOnSecondaryFixedVariant">@color/white</item>
+
+        <!-- Fixed tertiary color settings -->
+        <item name="colorTertiaryFixed">@color/black</item>
+        <item name="colorOnTertiaryFixed">@color/white</item>
+        <item name="colorTertiaryFixedDim">@color/black</item>
+        <item name="colorOnTertiaryFixedVariant">@color/white</item>
+
+        <!-- Surface dim/bright/container variations for depth and elevation effects -->
+        <item name="colorSurfaceDim">@color/dark</item>
+        <item name="colorSurfaceBright">@color/white</item>
+        <item name="colorSurfaceContainerLowest">@color/dark</item>
+        <item name="colorSurfaceContainerLow">@color/white</item>
+        <item name="colorSurfaceContainer">@color/dark</item>
+        <item name="colorSurfaceContainerHigh">@color/white</item>
+        <item name="colorSurfaceContainerHighest">@color/dark</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/dark</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonPositive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonNegative</item>
+    </style>
+
+    <style name="DialogButtonPositive" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="DialogButtonNegative" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
