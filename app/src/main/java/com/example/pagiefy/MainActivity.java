@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.pagiefy.databinding.ActivityMainBinding;
 
-
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
