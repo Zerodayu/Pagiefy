@@ -2,7 +2,6 @@ package com.example.pagiefy;
 
 import android.os.Bundle;
 
-import android.os.Bundle;
 import android.view.View;
 import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,19 +31,19 @@ public class MainActivity extends AppCompatActivity {
             contentView.setPadding(0, getStatusBarHeight(), 0, 0);
         }
 
-        replaceFragment(new SavesFragment());
+        replaceFragment(new LibraryFragment());
 
         binding.BottomNav.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
             if (itemId == R.id.Saves) {
-                replaceFragment(new SavesFragment());
+                replaceFragment(new LibraryFragment());
             } else if (itemId == R.id.Add) {
                 replaceFragment(new AddFragment());
             } else if (itemId == R.id.Extensions) {
                 replaceFragment(new ExtensionFragment());
             } else if (itemId == R.id.Settings) {
-                replaceFragment(new SettingsFragment());
+                replaceFragment(new AboutFragment());
             }
 
             return true;
@@ -57,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.FrameLayout, fragment);
 
-        if (!(fragment instanceof SavesFragment ||
+        if (!(fragment instanceof LibraryFragment ||
                 fragment instanceof AddFragment ||
                 fragment instanceof ExtensionFragment ||
-                fragment instanceof SettingsFragment)) {
+                fragment instanceof AboutFragment)) {
             transaction.addToBackStack(null);
         }
         transaction.commit();
@@ -69,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateBottomNavVisibility(Fragment fragment) {
-        if (fragment instanceof SavesFragment ||
+        if (fragment instanceof LibraryFragment ||
                 fragment instanceof AddFragment ||
                 fragment instanceof ExtensionFragment ||
-                fragment instanceof SettingsFragment) {
+                fragment instanceof AboutFragment) {
             binding.BottomNav.setVisibility(View.VISIBLE);
         } else {
             binding.BottomNav.setVisibility(View.GONE);

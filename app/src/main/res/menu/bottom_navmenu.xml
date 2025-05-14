@@ -13,8 +13,8 @@
         android:icon="@drawable/link_icon"
         android:id="@+id/Extensions"/>
 
-    <item android:title="Settings"
-        android:icon="@drawable/setting_icon"
+    <item android:title="About us"
+        android:icon="@drawable/info_icon"
         android:id="@+id/Settings"/>
 
 </menu>
