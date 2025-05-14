@@ -2,6 +2,7 @@ package com.example.pagiefy;
 
 import android.os.Bundle;
 
+import android.os.Bundle;
 import android.view.View;
 import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.pagiefy.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
             contentView.setPadding(0, getStatusBarHeight(), 0, 0);
         }
 
-        replaceFragment(new LibraryFragment());
+        replaceFragment(new SavesFragment());
 
         binding.BottomNav.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
             if (itemId == R.id.Saves) {
-                replaceFragment(new LibraryFragment());
+                replaceFragment(new SavesFragment());
             } else if (itemId == R.id.Add) {
                 replaceFragment(new AddFragment());
             } else if (itemId == R.id.Extensions) {
                 replaceFragment(new ExtensionFragment());
             } else if (itemId == R.id.Settings) {
-                replaceFragment(new AboutFragment());
+                replaceFragment(new SettingsFragment());
             }
 
             return true;
@@ -55,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.FrameLayout, fragment);
 
-        if (!(fragment instanceof LibraryFragment ||
+        if (!(fragment instanceof SavesFragment ||
                 fragment instanceof AddFragment ||
                 fragment instanceof ExtensionFragment ||
-                fragment instanceof AboutFragment)) {
+                fragment instanceof SettingsFragment)) {
             transaction.addToBackStack(null);
         }
         transaction.commit();
@@ -67,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateBottomNavVisibility(Fragment fragment) {
-        if (fragment instanceof LibraryFragment ||
+        if (fragment instanceof SavesFragment ||
                 fragment instanceof AddFragment ||
                 fragment instanceof ExtensionFragment ||
-                fragment instanceof AboutFragment) {
+                fragment instanceof SettingsFragment) {
             binding.BottomNav.setVisibility(View.VISIBLE);
         } else {
             binding.BottomNav.setVisibility(View.GONE);
